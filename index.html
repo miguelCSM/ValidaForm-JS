@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validación Formilario</title>
+  </head>
+  <body>
+    <form action="#" onsubmit="return validarForma(this)">
+      <table width="200" id="enfasis-columna">
+        <caption>
+          Registro de datos
+        </caption>
+        <!--Nombre de usuario-->
+        <tr>
+          <td class="columna">Usuario:(*)</td>
+          <td>
+            <input
+              class="default"
+              type="text"
+              name="usuario"
+              value="Escribir usuario"
+              onfocus="this.select()"
+            />
+          </td>
+        </tr>
+        <!--Contraseña-->
+        <tr>
+          <td class="columna">Password:(*)</td>
+          <td>
+            <input
+              class="default"
+              type="password"
+              name="password"
+              onfocus="this.select()"
+            />
+          </td>
+        </tr>
+        <!--Genero-->
+        <tr>
+          <td class="columna">Genero:(*)</td>
+          <td>
+            Masculino :
+            <input type="radio" name="genero" value="M" /> &nbsp;&nbsp;&nbsp;
+            Femenino :
+            <input type="radio" name="genero" value="F" /> &nbsp;&nbsp;&nbsp;
+            Otro : <input type="radio" name="genero" value="O" />
+          </td>
+        </tr>
+        <!--Ocupación-->
+        <tr>
+          <td class="columna">Ocupación:(*)</td>
+          <td>
+            <select name="ocupacion" class="default">
+              <option value="">Seleccionar</option>
+              <option value="1">Profesor</option>
+              <option value="2">Ingeniero</option>
+              <option value="3">Jubilado</option>
+              <option value="4">Otro</option>
+            </select>
+          </td>
+        </tr>
+        <!--Tecnológias-->
+        <tr>
+          <td class="columna">Tecnologías de desarrollo:(*)</td>
+          <td>
+            Java
+            <input type="checkbox" name="tecnologia" value="java" />
+            &nbsp;&nbsp;&nbsp; JS
+            <input type="checkbox" name="tecnologia" value="js" />
+            &nbsp;&nbsp;&nbsp; PHP
+            <input type="checkbox" name="tecnologia" value="php" />
+            &nbsp;&nbsp;&nbsp;
+          </td>
+        </tr>
+        <!--Música-->
+        <tr>
+          <td class="columna">Música</td>
+          <td>
+            <select name="musica" class="default" multiple>
+              <option value="rock">Rock</option>
+              <option value="rock">Salsa</option>
+              <option value="rock">Jazz</option>
+              <option value="rock">Clasica</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="columna">Comentarios</td>
+          <td>
+            <textarea
+              name="comentarios"
+              cols="30"
+              rows="2"
+              onfocus="this.select()"
+            >
+        Si tiene comentarios o dudas escriba aquí
+        </textarea
+            >
+          </td>
+        </tr>
+        <tr style="text-align: center">
+          <td>
+            <input type="reset" value="Limpiar" class="default" />
+          </td>
+          <td>
+            <input type="submit" value="Enviar" class="default" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
